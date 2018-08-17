@@ -9,7 +9,10 @@ static int hasDisplayNameChanged = 0;
 
 char *own_strdup(const char *str)
 {
-    char *result = malloc(strlen(str) + 1);
+    int len = 0;
+    while (str[len])
+        len++;
+    char *result = (char*)malloc(str + 1);
     char *psrc = str;
     char *pdst = result;
     while (*psrc != 0)
