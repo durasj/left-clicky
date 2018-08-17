@@ -12,16 +12,9 @@ char *own_strdup(const char *str)
     int len = 0;
     while (str[len])
         len++;
-    char *result = (char*)malloc(len + 1);
-    char *psrc = str;
-    char *pdst = result;
-    while (*psrc != 0)
-    {
-        *pdst = *psrc;
-        pdst++;
-        psrc++;
-    }
-    *pdst = '\0';
+    char *result = malloc(len + 1);
+    for (size_t i = 0; i <= len; i++)
+        result[i] = str[i];
     return result;
 }
 
