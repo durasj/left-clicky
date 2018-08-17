@@ -6,6 +6,7 @@
   "scripts": {
     "build": "node-gyp rebuild",
     "clean": "node-gyp clean",
+    "install": "node-gyp-build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jakub Duras <jakub@duras.me>",
@@ -15,6 +16,7 @@
     "node-gyp": "^3.8.0"
   },
   "dependencies": {
-    "node-addon-api": "^1.4.0"
+    "node-addon-api": "^1.4.0",
+    "node-gyp-build": "^3.4.0"
   }
 }
