@@ -12,7 +12,7 @@ char *own_strdup(const char *str)
     int len = 0;
     while (str[len])
         len++;
-    char *result = (char*)malloc(str + 1);
+    char *result = (char*)malloc(len + 1);
     char *psrc = str;
     char *pdst = result;
     while (*psrc != 0)
