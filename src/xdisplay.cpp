@@ -7,15 +7,20 @@ static int registered = 0;
 static const char *displayName = ":0.0";
 static int hasDisplayNameChanged = 0;
 
-char *own_strdup(const char *str)
+char *own_strdup(const char *src)
 {
+    char *str;
+    char *p;
     int len = 0;
-    while (str[len])
+
+    while (src[len])
         len++;
-    char *result = malloc(len + 1);
-    for (size_t i = 0; i <= len; i++)
-        result[i] = str[i];
-    return result;
+    str = (char*)malloc(len + 1);
+    p = str;
+    while (*src)
+        *p++ = *src++;
+    *p = '\0';
+    return str;
 }
 
 Display *XGetMainDisplay(void)
