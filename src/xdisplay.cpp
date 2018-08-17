@@ -4,8 +4,23 @@
 
 static Display *mainDisplay = NULL;
 static int registered = 0;
-static char *displayName = ":0.0";
+static const char *displayName = ":0.0";
 static int hasDisplayNameChanged = 0;
+
+char *own_strdup(const char *str)
+{
+    char *result = malloc(strlen(str) + 1);
+    char *psrc = str;
+    char *pdst = result;
+    while (*psrc != 0)
+    {
+        *pdst = *psrc;
+        pdst++;
+        psrc++;
+    }
+    *pdst = '\0';
+    return result;
+}
 
 Display *XGetMainDisplay(void)
 {
@@ -50,13 +65,13 @@ void XCloseMainDisplay(void)
     }
 }
 
-char *getXDisplay(void)
+const char *getXDisplay(void)
 {
     return displayName;
 }
 
-void setXDisplay(char *name)
+void setXDisplay(const char *name)
 {
-    displayName = strdup(name);
+    displayName = own_strdup(name);
     hasDisplayNameChanged = 1;
 }

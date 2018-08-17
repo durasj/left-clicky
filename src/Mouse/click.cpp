@@ -1,12 +1,12 @@
 #include "click.h"
 
 #if defined(IS_MAC)
-	#include <ApplicationServices/ApplicationServices.h>
+  #include <ApplicationServices/ApplicationServices.h>
 #elif defined(IS_LINUX)
-	#include <X11/Xlib.h>
-	#include <X11/extensions/XTest.h>
-	#include <stdlib.h>
-	#include "xdisplay.h"
+  #include <X11/Xlib.h>
+  #include <X11/extensions/XTest.h>
+  #include <stdlib.h>
+  #include "../xdisplay.h"
 #endif
 
 /**

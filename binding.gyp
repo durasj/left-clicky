@@ -49,7 +49,7 @@
                 },
 
                 "sources": [
-                    "src/xdisplay.c"
+                    "src/xdisplay.cpp"
                 ],
 
                 "defines": ["IS_LINUX"]
