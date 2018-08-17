@@ -14,10 +14,6 @@
 #endif
 
 namespace Mouse {
-#if defined(IS_MACOSX)
-  #include <ApplicationServices/ApplicationServices.h>
-#endif
-
   MMPoint getMousePos(void);
   void toggleMouse(bool down);
   bool click();
