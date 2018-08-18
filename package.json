@@ -1,6 +1,6 @@
 {
   "name": "left-clicky",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Basic synthetic left mouse click event working on Windows, Mac, and Linux.",
   "main": "index.js",
   "repository": "https://github.com/durasj/left-clicky",
